@@ -43,6 +43,15 @@ body { font-family: sans-serif; background: #0a0a0f; }
 .hero-card-total-label { font-size: 13px; color: #888; }
 .hero-card-total-amount { font-size: 20px; font-weight: 500; color: #4a7fff; }
 
+.processors-wrap { padding: 40px 24px; border-bottom: 0.5px solid #1e1e2e; background: #0a0a0f; }
+.processors-inner { max-width: 820px; margin: 0 auto; }
+.processors-label { font-size: 11px; letter-spacing: 0.12em; color: #444; text-transform: uppercase; text-align: center; margin-bottom: 24px; }
+.processors-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.processor-card { background: #0f0f1a; border: 0.5px solid #1e1e2e; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.processor-icon { width: 36px; height: 36px; border-radius: 8px; background: rgba(74,127,255,0.08); border: 0.5px solid rgba(74,127,255,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.processor-name { font-size: 14px; font-weight: 500; color: #f0f0f0; margin-bottom: 6px; }
+.processor-desc { font-size: 11px; color: #555; line-height: 1.6; }
+
 .why-wrap { padding: 80px 24px 100px; border-bottom: 0.5px solid #1e1e2e; }
 .section-label { text-align: center; font-size: 12px; letter-spacing: 0.12em; color: #888; text-transform: uppercase; margin-bottom: 16px; }
 .section-title { text-align: center; font-size: 36px; font-weight: 500; color: #f0f0f0; margin-bottom: 12px; line-height: 1.2; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -115,6 +124,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
   .hero-right { width: 100%; }
   .hero-title { font-size: 32px; }
   .two-grid { grid-template-columns: 1fr; }
+  .processors-grid { grid-template-columns: repeat(2, 1fr); }
   .hiw-connector { flex-wrap: wrap; gap: 8px; }
   .hiw-arrow { display: none; }
   .footer-inner { grid-template-columns: 1fr; }
@@ -134,13 +144,13 @@ body { font-family: sans-serif; background: #0a0a0f; }
 <div class="hero-wrap">
   <div class="hero-inner">
     <div class="hero-left">
-      <p class="hero-tag">Revenue integrity for fintech</p>
-      <h1 class="hero-title">Fintech companies lose <span>3–7%</span> of revenue to billing errors.</h1>
-      <p class="hero-desc">We detect leakage, recover lost revenue, and deliver bank-grade reporting that proves your revenue controls actually work.</p>
+      <p class="hero-tag">Revenue integrity across all payment processors</p>
+      <h1 class="hero-title">Fintech companies lose <span>3–7%</span> of revenue to payment leakage.</h1>
+      <p class="hero-desc">We connect to your payment processors — Stripe, Adyen, Marqeta, and Dwolla — detect leakage across all of them, recover what was lost, and deliver bank-grade reporting that proves your revenue controls actually work.</p>
       <div class="hero-stats">
-        <div><p class="hero-stat-num">11</p><p class="hero-stat-label">Anomaly types detected</p></div>
-        <div><p class="hero-stat-num">7 days</p><p class="hero-stat-label">To full audit report</p></div>
-        <div><p class="hero-stat-num">$0</p><p class="hero-stat-label">If we find nothing</p></div>
+        <div><p class="hero-stat-num">4</p><p class="hero-stat-label">Processors covered</p></div>
+        <div><p class="hero-stat-num">15+</p><p class="hero-stat-label">Anomaly types detected</p></div>
+        <div><p class="hero-stat-num">$0</p><p class="hero-stat-label">Free audit, zero risk</p></div>
       </div>
       <div class="hero-actions">
         <a href="https://cal.com/preston-core/30min" class="hero-btn">Free diagnostic call</a>
@@ -152,15 +162,51 @@ body { font-family: sans-serif; background: #0a0a0f; }
         <p class="hero-card-label">Live audit findings</p>
         <p class="hero-card-title">Anomalies detected — last 90 days</p>
         <div class="hero-anomalies">
-          <div class="hero-anomaly"><div class="hero-anomaly-left"><div class="hero-anomaly-dot red"></div><span class="hero-anomaly-name">Failed payments</span></div><span class="hero-anomaly-amount">$24,300</span></div>
-          <div class="hero-anomaly"><div class="hero-anomaly-left"><div class="hero-anomaly-dot red"></div><span class="hero-anomaly-name">Dunning failures</span></div><span class="hero-anomaly-amount">$12,800</span></div>
-          <div class="hero-anomaly"><div class="hero-anomaly-left"><div class="hero-anomaly-dot amber"></div><span class="hero-anomaly-name">Undercharges</span></div><span class="hero-anomaly-amount">$8,440</span></div>
-          <div class="hero-anomaly"><div class="hero-anomaly-left"><div class="hero-anomaly-dot amber"></div><span class="hero-anomaly-name">Silent churn</span></div><span class="hero-anomaly-amount">$6,100</span></div>
-          <div class="hero-anomaly"><div class="hero-anomaly-left"><div class="hero-anomaly-dot blue"></div><span class="hero-anomaly-name">FX variance</span></div><span class="hero-anomaly-amount">$3,920</span></div>
+          <div class="hero-anomaly"><div class="hero-anomaly-left"><div class="hero-anomaly-dot red"></div><span class="hero-anomaly-name">Fee overcharges · Stripe</span></div><span class="hero-anomaly-amount">$18,340</span></div>
+          <div class="hero-anomaly"><div class="hero-anomaly-left"><div class="hero-anomaly-dot red"></div><span class="hero-anomaly-name">Duplicate charges · Adyen</span></div><span class="hero-anomaly-amount">$14,200</span></div>
+          <div class="hero-anomaly"><div class="hero-anomaly-left"><div class="hero-anomaly-dot amber"></div><span class="hero-anomaly-name">Failed ACH fees · Dwolla</span></div><span class="hero-anomaly-amount">$8,440</span></div>
+          <div class="hero-anomaly"><div class="hero-anomaly-left"><div class="hero-anomaly-dot amber"></div><span class="hero-anomaly-name">Missed interchange · Marqeta</span></div><span class="hero-anomaly-amount">$9,100</span></div>
+          <div class="hero-anomaly"><div class="hero-anomaly-left"><div class="hero-anomaly-dot blue"></div><span class="hero-anomaly-name">FX spread variance · Adyen</span></div><span class="hero-anomaly-amount">$5,480</span></div>
         </div>
         <div class="hero-card-total">
           <span class="hero-card-total-label">Total recoverable</span>
           <span class="hero-card-total-amount">$55,560</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="processors-wrap">
+  <div class="processors-inner">
+    <p class="processors-label">Supported payment processors</p>
+    <div class="processors-grid">
+      <div class="processor-card">
+        <div class="processor-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="11" rx="2" stroke="#4a7fff" stroke-width="1"/><path d="M2 8h16" stroke="#4a7fff" stroke-width="1"/></svg></div>
+        <div>
+          <p class="processor-name">Stripe</p>
+          <p class="processor-desc">Fee overcharges · Duplicates · Failed tx fees · Refund leakage · Dispute recovery · Radar fees</p>
+        </div>
+      </div>
+      <div class="processor-card">
+        <div class="processor-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#4a7fff" stroke-width="1"/><path d="M7 10h6M10 7v6" stroke="#4a7fff" stroke-width="1" stroke-linecap="round"/></svg></div>
+        <div>
+          <p class="processor-name">Adyen</p>
+          <p class="processor-desc">Interchange++ mismatches · FX spread variance · Scheme fees · Settlement timing · Cross-processor duplicates</p>
+        </div>
+      </div>
+      <div class="processor-card">
+        <div class="processor-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="7" width="14" height="9" rx="1.5" stroke="#4a7fff" stroke-width="1"/><path d="M7 7V5a3 3 0 016 0v2" stroke="#4a7fff" stroke-width="1"/></svg></div>
+        <div>
+          <p class="processor-name">Marqeta</p>
+          <p class="processor-desc">Missed interchange credits · Program funding gaps · Transaction event reconciliation · Issuing fee audit</p>
+        </div>
+      </div>
+      <div class="processor-card">
+        <div class="processor-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4v12" stroke="#4a7fff" stroke-width="1" stroke-linecap="round"/><circle cx="10" cy="10" r="7" stroke="#4a7fff" stroke-width="1"/></svg></div>
+        <div>
+          <p class="processor-name">Dwolla</p>
+          <p class="processor-desc">ACH return fees · Failed transfer retry costs · R-code leakage · Transfer reconciliation gaps</p>
         </div>
       </div>
     </div>
@@ -216,20 +262,20 @@ body { font-family: sans-serif; background: #0a0a0f; }
     <div class="grid-card">
       <div class="grid-card-top"><span class="grid-tag">Step 01</span><div class="grid-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6" stroke="#4a7fff" stroke-width="1"/><path d="M9 6v3l2 2" stroke="#4a7fff" stroke-width="1" stroke-linecap="round"/></svg></div></div>
       <p class="grid-card-name">Secure connection</p>
-      <p class="grid-card-desc">We connect to your Stripe account using read-only access. No ability to move funds or make changes — ever. Setup takes under 5 minutes.</p>
+      <p class="grid-card-desc">We connect to your payment processors — Stripe, Adyen, Marqeta, and Dwolla — using read-only API access. No ability to move funds or make changes — ever. Each processor is connected individually and scanned in parallel.</p>
       <div class="grid-details">
-        <div class="grid-detail"><div class="dot"></div>Read-only Stripe access</div>
-        <div class="grid-detail"><div class="dot"></div>No credentials stored</div>
-        <div class="grid-detail"><div class="dot"></div>Setup in under 5 minutes</div>
+        <div class="grid-detail"><div class="dot"></div>Stripe, Adyen, Marqeta & Dwolla</div>
+        <div class="grid-detail"><div class="dot"></div>Read-only access only</div>
+        <div class="grid-detail"><div class="dot"></div>Setup in under 10 minutes</div>
       </div>
     </div>
     <div class="grid-card">
       <div class="grid-card-top"><span class="grid-tag">Step 02</span><div class="grid-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5" stroke="#4a7fff" stroke-width="1"/><path d="M12 12l3 3" stroke="#4a7fff" stroke-width="1" stroke-linecap="round"/></svg></div></div>
       <p class="grid-card-name">Full detection scan</p>
-      <p class="grid-card-desc">Our detection engine scans your billing data across 11 anomaly types. Every finding is quantified in dollars so you know exactly what's at risk.</p>
+      <p class="grid-card-desc">Our detection engines run independently per processor, scanning for 15+ anomaly types including fee overcharges, duplicate charges, failed transaction fees, missed interchange credits, FX spread variance, refund fee loss, and settlement timing gaps. Every finding is quantified in dollars.</p>
       <div class="grid-details">
-        <div class="grid-detail"><div class="dot"></div>11 anomaly types detected</div>
-        <div class="grid-detail"><div class="dot"></div>Dollar amount per finding</div>
+        <div class="grid-detail"><div class="dot"></div>15+ anomaly types detected</div>
+        <div class="grid-detail"><div class="dot"></div>Cross-processor duplicate detection</div>
         <div class="grid-detail"><div class="dot"></div>Full report in 7 days</div>
       </div>
     </div>
@@ -246,9 +292,9 @@ body { font-family: sans-serif; background: #0a0a0f; }
     <div class="grid-card">
       <div class="grid-card-top"><span class="grid-tag">Step 04</span><div class="grid-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L3 5v4c0 3.5 2.5 6.7 6 7.4 3.5-.7 6-3.9 6-7.4V5L9 2z" stroke="#4a7fff" stroke-width="1" stroke-linejoin="round"/></svg></div></div>
       <p class="grid-card-name">Ongoing protection</p>
-      <p class="grid-card-desc">After recovery we run monthly audits and implement protections so the same issues never return. You get a monthly report showing everything found and actioned.</p>
+      <p class="grid-card-desc">After recovery we run monthly audits across all connected processors and implement protections so the same issues never return. You get a monthly report showing everything found and actioned — per processor and in aggregate.</p>
       <div class="grid-details">
-        <div class="grid-detail"><div class="dot"></div>Monthly Stripe audits</div>
+        <div class="grid-detail"><div class="dot"></div>Monthly audits across all processors</div>
         <div class="grid-detail"><div class="dot"></div>Protection checklist live</div>
         <div class="grid-detail"><div class="dot"></div>Monthly findings report</div>
       </div>
@@ -266,12 +312,12 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="step-right">
         <p class="step-tag">Start here</p>
         <p class="step-name">Revenue Audit</p>
-        <p class="step-desc">We connect to your Stripe data and run a full detection scan across 11 anomaly types — failed payments, undercharges, FX variance, silent churn, disputes, duplicates, and more. You receive a complete findings report within 7 days.</p>
-        <div class="step-price"><span class="price-main">$500</span><span class="price-unit">one-time</span></div>
-        <p class="price-note">Full refund if we find nothing</p>
+        <p class="step-desc">We connect to your payment processors — Stripe, Adyen, Marqeta, and Dwolla — and run a full detection scan across 15+ anomaly types including fee overcharges, duplicate charges, failed transaction fees, missed interchange credits, FX spread variance, refund fee loss, cross-processor duplicates, settlement timing gaps, and more. You receive a complete findings report within 7 days.</p>
+        <div class="step-price"><span class="price-main">$0</span><span class="price-unit">free audit</span></div>
+        <p class="price-note">No cost, no commitment — we take on the risk</p>
         <div class="features">
-          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Full Stripe data analysis</div>
-          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>11 anomaly types detected</div>
+          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Stripe, Adyen, Marqeta & Dwolla analysis</div>
+          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>15+ anomaly types detected</div>
           <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Dollar amount at risk per anomaly</div>
           <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Full findings report delivered in 7 days</div>
         </div>
@@ -282,14 +328,14 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="step-right">
         <p class="step-tag">Recovery phase</p>
         <p class="step-name">Revenue Recovery</p>
-        <p class="step-desc">We work through every finding from the audit and action each one — retrying failed charges, correcting billing errors, submitting dispute evidence, and implementing win-back sequences for churned customers.</p>
+        <p class="step-desc">We work through every finding from the audit and action each one — contacting processors directly to recover fee overcharges, submitting dispute evidence, correcting billing errors, recovering missed interchange credits, and negotiating settlement timing improvements on your behalf. You only pay when we recover money.</p>
         <div class="step-price"><span class="price-main">15%</span><span class="price-unit">of recovered revenue</span></div>
         <p class="price-note">You only pay when we recover money</p>
         <div class="features">
-          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Failed payment recovery</div>
-          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Dispute evidence submission</div>
-          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Billing error corrections</div>
-          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Win-back campaigns for silent churn</div>
+          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Fee overcharge recovery (all processors)</div>
+          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Dispute & chargeback evidence submission</div>
+          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Interchange credit reconciliation</div>
+          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Billing error & duplicate corrections</div>
         </div>
       </div>
     </div>
@@ -298,14 +344,14 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="step-right">
         <p class="step-tag">Ongoing protection</p>
         <p class="step-name">Monthly Monitoring</p>
-        <p class="step-desc">After recovery is complete we stay on as your dedicated revenue protection layer. Monthly Stripe audits, real-time anomaly detection, and a monthly report showing exactly what was found and actioned.</p>
+        <p class="step-desc">After recovery is complete we stay on as your dedicated revenue protection layer. Monthly audits across all connected processors, real-time anomaly detection, and a monthly report showing exactly what was found and actioned — broken down per processor and in aggregate.</p>
         <div class="step-price"><span class="price-main">$1,500</span><span class="price-unit">/month</span></div>
         <p class="price-note">Cancel anytime</p>
         <div class="features">
-          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Monthly Stripe data audit</div>
-          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Ongoing anomaly detection</div>
+          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Monthly audits across all 4 processors</div>
+          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Real-time anomaly detection</div>
           <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Protection checklist implementation</div>
-          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Monthly findings report</div>
+          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Monthly per-processor findings report</div>
           <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Quarterly review call</div>
         </div>
       </div>
@@ -314,8 +360,8 @@ body { font-family: sans-serif; background: #0a0a0f; }
   <div class="guarantee">
     <div class="guarantee-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L3 5v4c0 3.5 2.5 6.7 6 7.4 3.5-.7 6-3.9 6-7.4V5L9 2z" stroke="#4a7fff" stroke-width="1" stroke-linejoin="round"/></svg></div>
     <div>
-      <p class="guarantee-title">Full refund guarantee</p>
-      <p class="guarantee-text">If we run your audit and find no recoverable revenue, you pay nothing. We take on the risk so you don't have to. Every engagement starts with this commitment.</p>
+      <p class="guarantee-title">Zero risk guarantee</p>
+      <p class="guarantee-text">The audit is completely free. If we run your audit and find no recoverable revenue, you owe us nothing — not even for the time spent. We take on the risk so you don't have to. Every engagement starts with this commitment.</p>
     </div>
   </div>
 </div>
@@ -333,7 +379,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
   <div class="footer-inner">
     <div>
       <p class="footer-brand">Core Regulation</p>
-      <p class="footer-desc">Standardizing revenue integrity for the modern fintech ecosystem. We provide bank-grade controls and leakage recovery for scaling subscription and payment platforms.</p>
+      <p class="footer-desc">Standardizing revenue integrity across Stripe, Adyen, Marqeta, and Dwolla. We detect leakage, recover lost revenue, and provide bank-grade controls for scaling fintech and payment platforms.</p>
     </div>
     <div>
       <p class="footer-contact-label">Contact</p>
