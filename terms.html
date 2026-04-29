@@ -31,7 +31,8 @@ body { font-family: sans-serif; background: #0a0a0f; }
 .doc-section-body ul li::before { content: ''; position: absolute; left: 0; top: 10px; width: 4px; height: 4px; border-radius: 50%; background: #4a7fff; }
 .doc-divider { height: 0.5px; background: #1e1e2e; }
 .highlight-box { background: #0f0f1a; border: 0.5px solid #1e1e2e; border-radius: 12px; padding: 24px 28px; margin-top: 8px; border-left: 2px solid #4a7fff; }
-.highlight-box p { font-size: 14px; color: #888; line-height: 1.7; }
+.highlight-box p { font-size: 14px; color: #888; line-height: 1.7; margin-bottom: 12px; }
+.highlight-box p:last-child { margin-bottom: 0; }
 .contact-box { background: #0f0f1a; border: 0.5px solid #1e1e2e; border-radius: 12px; padding: 28px 32px; margin-top: 8px; }
 .contact-box-title { font-size: 15px; font-weight: 500; color: #f0f0f0; margin-bottom: 8px; }
 .contact-box-text { font-size: 14px; color: #888; line-height: 1.7; }
@@ -70,7 +71,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
   <div class="page-header">
     <p class="page-tag">Legal</p>
     <h1 class="page-title">Terms of Service</h1>
-    <p class="page-meta">Last updated: April 16, 2026</p>
+    <p class="page-meta">Last updated: April 28, 2026</p>
   </div>
 
   <div class="doc-body">
@@ -92,7 +93,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="doc-section-body">
         <p>Core Regulation provides the following services:</p>
         <ul>
-          <li><strong style="color:#aaa">Revenue Audit</strong> — a free analysis of your payment processor data across Stripe, Adyen, Marqeta, and Dwolla to identify revenue leakage and anomalies, delivered within 7 business days.</li>
+          <li><strong style="color:#aaa">Revenue Audit</strong> — a free analysis of your payment processor data across Stripe, Adyen, Square, and PayPal to identify revenue leakage and anomalies, delivered within 7 business days.</li>
           <li><strong style="color:#aaa">Revenue Recovery</strong> — active recovery of identified leakage on your behalf, including contacting payment processors, submitting dispute evidence, and negotiating fee credits. Billed at 15% of successfully recovered revenue.</li>
           <li><strong style="color:#aaa">Monthly Monitoring</strong> — ongoing detection, reporting, and protection across all connected payment processors at $1,500 per month.</li>
         </ul>
@@ -113,7 +114,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
           <li>Does not grant us any ability to access, move, or control your funds directly</li>
           <li>Can be revoked at any time by providing written notice to Team@coreregulation.com</li>
         </ul>
-        <p>All read-only API connections are established solely for the purpose of detecting anomalies. We will never request write-level access to your payment processor accounts.</p>
+        <p>API connections established for detection purposes are read-only and used solely to identify anomalies. Any recovery actions taken on your behalf — such as contacting processors or submitting disputes — require separate explicit written authorization as described above. We will never move, transfer, or withdraw funds from your accounts.</p>
       </div>
     </div>
 
@@ -134,10 +135,11 @@ body { font-family: sans-serif; background: #0a0a0f; }
 
     <div class="doc-section">
       <p class="doc-section-num">05</p>
-      <p class="doc-section-title">No Guarantee of Recovery</p>
+      <p class="doc-section-title">No Guarantee of Recovery or Detection</p>
       <div class="doc-section-body">
         <div class="highlight-box">
           <p>We do not guarantee that any specific amount of revenue will be recovered. Our detection engine identifies potential leakage based on available data, but recovery outcomes depend on factors outside our control, including payment processor policies, dispute timeframes, card network rules, and the age of the transactions in question. We will make all reasonable efforts to recover identified leakage, but outcomes are not guaranteed.</p>
+          <p>We also do not guarantee that all anomalies or instances of revenue leakage will be detected. Our platform operates on a best-effort basis using automated detection methods. Core Regulation is not liable for anomalies, overcharges, or leakage that are not identified by our system. Clients are encouraged to maintain their own independent review processes.</p>
         </div>
       </div>
     </div>
@@ -151,7 +153,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
         <p>You agree to:</p>
         <ul>
           <li>Provide accurate and complete information during onboarding and throughout the engagement</li>
-          <li>Grant read-only API access to the payment processors you wish us to analyze</li>
+          <li>Grant the necessary API access to the payment processors you wish us to analyze, including read-only access for detection and any additional access required for authorized recovery actions</li>
           <li>Promptly review and respond to findings reports and recovery recommendations</li>
           <li>Notify us immediately if you revoke any API credentials or change your processor accounts</li>
           <li>Ensure that any authorization you provide to us is valid and that you have authority to grant it</li>
@@ -190,6 +192,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="doc-section-body">
         <div class="highlight-box">
           <p>To the maximum extent permitted by law, Core Regulation's total liability to you for any claims arising from or related to these Terms or our services shall not exceed the total fees paid by you to us in the 3 months preceding the claim. We are not liable for any indirect, incidental, consequential, or punitive damages, including lost profits or lost revenue, even if we have been advised of the possibility of such damages.</p>
+          <p>This limitation applies to all claims whether based on contract, tort, negligence, or any other legal theory, including claims arising from missed detections, incomplete recovery, platform downtime, or data handling.</p>
         </div>
       </div>
     </div>
@@ -235,6 +238,24 @@ body { font-family: sans-serif; background: #0a0a0f; }
 
     <div class="doc-section">
       <p class="doc-section-num">13</p>
+      <p class="doc-section-title">Data Security</p>
+      <div class="doc-section-body">
+        <p>Core Regulation takes the security of your data seriously. We implement industry-standard practices to protect the credentials and transaction data you entrust to us, including:</p>
+        <ul>
+          <li>Encryption of all API keys and credentials at rest using AES-256 symmetric encryption</li>
+          <li>Encrypted transmission of all data in transit via TLS</li>
+          <li>Access controls limiting internal access to client data on a need-to-know basis</li>
+          <li>No storage of plaintext credentials at any point in our system</li>
+        </ul>
+        <p>In the event of a confirmed data breach that affects your credentials or transaction data, we will notify you within 72 hours of becoming aware of the incident and take immediate steps to contain and remediate the breach.</p>
+        <p>While we maintain strong security practices, no system is completely immune to security incidents. Core Regulation is not liable for breaches caused by factors outside our reasonable control, including vulnerabilities in third-party infrastructure or client-side security failures.</p>
+      </div>
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-section">
+      <p class="doc-section-num">14</p>
       <p class="doc-section-title">Contact</p>
       <div class="doc-section-body">
         <p>Questions about these Terms should be directed to:</p>
@@ -256,7 +277,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
   <div class="footer-inner">
     <div>
       <p class="footer-brand">Core Regulation</p>
-      <p class="footer-desc">Standardizing revenue integrity across Stripe, Adyen, Marqeta, and Dwolla. We detect leakage, recover lost revenue, and provide bank-grade controls for scaling fintech and payment platforms.</p>
+      <p class="footer-desc">Standardizing revenue integrity across Stripe, Adyen, Square, and PayPal. We detect leakage, recover lost revenue, and provide bank-grade controls for scaling fintech and payment platforms.</p>
     </div>
     <div>
       <p class="footer-contact-label">Contact</p>
