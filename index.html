@@ -64,7 +64,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
 .grid-detail { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #aaa; }
 .dot { width: 4px; height: 4px; border-radius: 50%; background: #4a7fff; flex-shrink: 0; }
 .hiw-wrap { padding: 80px 24px 100px; border-bottom: 0.5px solid #1e1e2e; }
-.hiw-connector { max-width: 820px; margin: 0 auto 48px; display: flex; align-items: center; justify-content: center; }
+.hiw-connector { max-width: 820px; margin: 0 auto 48px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; }
 .hiw-step-pill { display: flex; align-items: center; gap: 10px; background: #0f0f1a; border: 0.5px solid #1e1e2e; border-radius: 100px; padding: 10px 20px; }
 .hiw-step-pill-num { width: 22px; height: 22px; border-radius: 50%; background: #4a7fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; color: #fff; flex-shrink: 0; }
 .hiw-step-pill-text { font-size: 13px; color: #aaa; }
@@ -92,6 +92,39 @@ body { font-family: sans-serif; background: #0a0a0f; }
 .guarantee-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(74,127,255,0.08); border: 0.5px solid #4a7fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .guarantee-title { font-size: 16px; font-weight: 500; color: #f0f0f0; margin-bottom: 6px; }
 .guarantee-text { font-size: 14px; color: #888; line-height: 1.6; }
+.report-wrap { padding: 80px 24px 100px; border-bottom: 0.5px solid #1e1e2e; }
+.report-inner { max-width: 820px; margin: 0 auto; }
+.report-card { background: #0f0f1a; border: 0.5px solid #1e1e2e; border-radius: 12px; overflow: hidden; margin-top: 48px; }
+.report-card-header { padding: 28px 32px; border-bottom: 0.5px solid #1e1e2e; display: flex; align-items: center; justify-content: space-between; }
+.report-card-header-left { display: flex; flex-direction: column; gap: 6px; }
+.report-card-label { font-size: 11px; letter-spacing: 0.1em; color: #4a7fff; text-transform: uppercase; font-weight: 500; }
+.report-card-title { font-size: 18px; font-weight: 500; color: #f0f0f0; }
+.report-card-date { font-size: 13px; color: #555; }
+.report-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-bottom: 0.5px solid #1e1e2e; }
+.report-stat { padding: 24px 28px; border-right: 0.5px solid #1e1e2e; }
+.report-stat:last-child { border-right: none; }
+.report-stat-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #555; margin-bottom: 8px; }
+.report-stat-value { font-size: 28px; font-weight: 500; color: #f0f0f0; }
+.report-stat-value.blue { color: #4a7fff; }
+.report-stat-sub { font-size: 12px; color: #555; margin-top: 4px; }
+.report-breakdown { padding: 24px 28px; border-bottom: 0.5px solid #1e1e2e; }
+.report-breakdown-title { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #555; margin-bottom: 16px; }
+.report-breakdown-rows { display: flex; flex-direction: column; gap: 10px; }
+.report-breakdown-row { display: flex; align-items: center; justify-content: space-between; }
+.report-breakdown-left { display: flex; align-items: center; gap: 10px; }
+.report-breakdown-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.report-breakdown-dot.stripe { background: #4a7fff; }
+.report-breakdown-dot.adyen { background: #ef9f27; }
+.report-breakdown-dot.square { background: #1d9e75; }
+.report-breakdown-dot.paypal { background: #e24b4a; }
+.report-breakdown-name { font-size: 13px; color: #aaa; }
+.report-breakdown-amount { font-size: 13px; font-weight: 500; color: #f0f0f0; }
+.report-recs { padding: 24px 28px; }
+.report-recs-title { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #555; margin-bottom: 16px; }
+.report-rec { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+.report-rec:last-child { margin-bottom: 0; }
+.report-rec-num { width: 20px; height: 20px; border-radius: 50%; background: rgba(74,127,255,0.1); border: 0.5px solid #4a7fff; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 500; color: #4a7fff; flex-shrink: 0; margin-top: 1px; }
+.report-rec-text { font-size: 13px; color: #888; line-height: 1.6; }
 .cta-section { padding: 80px 24px; border-bottom: 0.5px solid #1e1e2e; }
 .cta-inner { max-width: 820px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .cta-title { font-size: 36px; font-weight: 500; color: #f0f0f0; line-height: 1.2; }
@@ -116,10 +149,12 @@ body { font-family: sans-serif; background: #0a0a0f; }
   .hero-title { font-size: 32px; }
   .two-grid { grid-template-columns: 1fr; }
   .processors-grid { grid-template-columns: repeat(2, 1fr); }
-  .hiw-connector { flex-wrap: wrap; gap: 8px; }
   .hiw-arrow { display: none; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .report-stats { grid-template-columns: 1fr; }
+  .report-stat { border-right: none; border-bottom: 0.5px solid #1e1e2e; }
+  .report-stat:last-child { border-bottom: none; }
 }
 </style>
 </head>
@@ -135,7 +170,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
   <div class="hero-inner">
     <div class="hero-left">
       <p class="hero-tag">Payment anomaly detection across all processors</p>
-      <h1 class="hero-title">Your payment processors are overcharging you. We find exactly how much.
+      <h1 class="hero-title">Your payment processors are overcharging you. We find exactly how much.</h1>
       <p class="hero-desc">We connect to your payment processors — Stripe, Adyen, Square, and PayPal — detect leakage across all of them, and hand you a step-by-step playbook to recover every dollar yourself. No percentage cuts. No recovery fees. Just clarity.</p>
       <div class="hero-stats">
         <div><p class="hero-stat-num">4</p><p class="hero-stat-label">Processors covered</p></div>
@@ -173,31 +208,19 @@ body { font-family: sans-serif; background: #0a0a0f; }
     <div class="processors-grid">
       <div class="processor-card">
         <div class="processor-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="11" rx="2" stroke="#4a7fff" stroke-width="1"/><path d="M2 8h16" stroke="#4a7fff" stroke-width="1"/></svg></div>
-        <div>
-          <p class="processor-name">Stripe</p>
-          <p class="processor-desc">Fee overcharges · Duplicates · Failed tx fees · Refund leakage · Dispute fees · Radar fees · Payout timing</p>
-        </div>
+        <div><p class="processor-name">Stripe</p><p class="processor-desc">Fee overcharges · Duplicates · Failed tx fees · Refund leakage · Dispute fees · Radar fees · Payout timing</p></div>
       </div>
       <div class="processor-card">
         <div class="processor-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#4a7fff" stroke-width="1"/><path d="M7 10h6M10 7v6" stroke="#4a7fff" stroke-width="1" stroke-linecap="round"/></svg></div>
-        <div>
-          <p class="processor-name">Adyen</p>
-          <p class="processor-desc">Interchange++ mismatches · FX spread variance · Scheme fees · Settlement timing · Cross-processor duplicates</p>
-        </div>
+        <div><p class="processor-name">Adyen</p><p class="processor-desc">Interchange++ mismatches · FX spread variance · Scheme fees · Settlement timing · Cross-processor duplicates</p></div>
       </div>
       <div class="processor-card">
         <div class="processor-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2" stroke="#4a7fff" stroke-width="1"/><path d="M7 10h6M10 7v6" stroke="#4a7fff" stroke-width="1" stroke-linecap="round"/></svg></div>
-        <div>
-          <p class="processor-name">Square</p>
-          <p class="processor-desc">Payout timing gaps · Tax anomalies · Duplicate payments · Refund leakage · Transfer reconciliation · Invoice leakage</p>
-        </div>
+        <div><p class="processor-name">Square</p><p class="processor-desc">Payout timing gaps · Tax anomalies · Duplicate payments · Refund leakage · Transfer reconciliation · Invoice leakage</p></div>
       </div>
       <div class="processor-card">
         <div class="processor-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4v12" stroke="#4a7fff" stroke-width="1" stroke-linecap="round"/><circle cx="10" cy="10" r="7" stroke="#4a7fff" stroke-width="1"/></svg></div>
-        <div>
-          <p class="processor-name">PayPal</p>
-          <p class="processor-desc">Chargeback fees · Refund leakage · Currency conversion losses · Hold anomalies · Subscription leakage · Unclaimed payments</p>
-        </div>
+        <div><p class="processor-name">PayPal</p><p class="processor-desc">Chargeback fees · Refund leakage · Currency conversion losses · Hold anomalies · Subscription leakage · Unclaimed payments</p></div>
       </div>
     </div>
   </div>
@@ -247,6 +270,8 @@ body { font-family: sans-serif; background: #0a0a0f; }
     <div class="hiw-step-pill"><div class="hiw-step-pill-num">3</div><span class="hiw-step-pill-text">Playbook</span></div>
     <div class="hiw-arrow"></div>
     <div class="hiw-step-pill"><div class="hiw-step-pill-num">4</div><span class="hiw-step-pill-text">Protect</span></div>
+    <div class="hiw-arrow"></div>
+    <div class="hiw-step-pill"><div class="hiw-step-pill-num">5</div><span class="hiw-step-pill-text">Monthly report</span></div>
   </div>
   <div class="two-grid">
     <div class="grid-card">
@@ -282,11 +307,70 @@ body { font-family: sans-serif; background: #0a0a0f; }
     <div class="grid-card">
       <div class="grid-card-top"><span class="grid-tag">Step 04</span><div class="grid-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L3 5v4c0 3.5 2.5 6.7 6 7.4 3.5-.7 6-3.9 6-7.4V5L9 2z" stroke="#4a7fff" stroke-width="1" stroke-linejoin="round"/></svg></div></div>
       <p class="grid-card-name">Ongoing protection</p>
-      <p class="grid-card-desc">After the initial scan we run continuous monitoring across all connected processors. Pattern-based alerts fire before issues compound. You get a monthly report showing everything found — per processor and in aggregate.</p>
+      <p class="grid-card-desc">After the initial scan we run continuous monitoring across all connected processors. Pattern-based alerts fire before issues compound, giving your team time to act before leakage accumulates.</p>
       <div class="grid-details">
         <div class="grid-detail"><div class="dot"></div>Continuous hourly monitoring</div>
         <div class="grid-detail"><div class="dot"></div>Pattern-based protection alerts</div>
-        <div class="grid-detail"><div class="dot"></div>Monthly findings report</div>
+        <div class="grid-detail"><div class="dot"></div>Alerts before issues compound</div>
+      </div>
+    </div>
+    <div class="grid-card" style="grid-column: 1 / -1;">
+      <div class="grid-card-top"><span class="grid-tag">Step 05</span><div class="grid-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="2" width="12" height="14" rx="1" stroke="#4a7fff" stroke-width="1"/><path d="M6 6h6M6 9h6M6 12h4" stroke="#4a7fff" stroke-width="1" stroke-linecap="round"/></svg></div></div>
+      <p class="grid-card-name">Monthly account overview</p>
+      <p class="grid-card-desc">Every 30 days you receive a full account overview showing total anomalies detected, dollars at risk per processor, trends from the prior month, and specific recommendations to minimize future leakage. It's your financial control document — ready for leadership reviews, audits, or your own records.</p>
+      <div class="grid-details">
+        <div class="grid-detail"><div class="dot"></div>Total anomalies found and dollars detected per processor</div>
+        <div class="grid-detail"><div class="dot"></div>Month-over-month leakage trends</div>
+        <div class="grid-detail"><div class="dot"></div>Tailored recommendations to reduce future leakage</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="report-wrap">
+  <div class="report-inner">
+    <p class="section-label">Monthly overview</p>
+    <h2 class="section-title">Everything you need in one report, every 30 days.</h2>
+    <p class="section-sub">A clear picture of what was found, how much is at risk, and exactly what to do about it.</p>
+    <div class="report-card">
+      <div class="report-card-header">
+        <div class="report-card-header-left">
+          <p class="report-card-label">Monthly account overview</p>
+          <p class="report-card-title">April 2026 — Payment anomaly summary</p>
+        </div>
+        <p class="report-card-date">Delivered May 1, 2026</p>
+      </div>
+      <div class="report-stats">
+        <div class="report-stat">
+          <p class="report-stat-label">Total anomalies detected</p>
+          <p class="report-stat-value">24</p>
+          <p class="report-stat-sub">Across 4 processors</p>
+        </div>
+        <div class="report-stat">
+          <p class="report-stat-label">Total dollars at risk</p>
+          <p class="report-stat-value blue">$12,840</p>
+          <p class="report-stat-sub">Quantified and itemised</p>
+        </div>
+        <div class="report-stat">
+          <p class="report-stat-label">vs prior month</p>
+          <p class="report-stat-value" style="color: #1d9e75;">−18%</p>
+          <p class="report-stat-sub">Leakage trending down</p>
+        </div>
+      </div>
+      <div class="report-breakdown">
+        <p class="report-breakdown-title">Breakdown by processor</p>
+        <div class="report-breakdown-rows">
+          <div class="report-breakdown-row"><div class="report-breakdown-left"><div class="report-breakdown-dot stripe"></div><span class="report-breakdown-name">Stripe — 9 anomalies</span></div><span class="report-breakdown-amount">$5,210</span></div>
+          <div class="report-breakdown-row"><div class="report-breakdown-left"><div class="report-breakdown-dot adyen"></div><span class="report-breakdown-name">Adyen — 7 anomalies</span></div><span class="report-breakdown-amount">$4,100</span></div>
+          <div class="report-breakdown-row"><div class="report-breakdown-left"><div class="report-breakdown-dot square"></div><span class="report-breakdown-name">Square — 5 anomalies</span></div><span class="report-breakdown-amount">$2,190</span></div>
+          <div class="report-breakdown-row"><div class="report-breakdown-left"><div class="report-breakdown-dot paypal"></div><span class="report-breakdown-name">PayPal — 3 anomalies</span></div><span class="report-breakdown-amount">$1,340</span></div>
+        </div>
+      </div>
+      <div class="report-recs">
+        <p class="report-recs-title">Recommendations to minimise future leakage</p>
+        <div class="report-rec"><div class="report-rec-num">1</div><p class="report-rec-text">Review your Stripe fee contract — fee overcharges on card-present transactions have recurred 3 months in a row, suggesting a rate mismatch that should be escalated to your account manager.</p></div>
+        <div class="report-rec"><div class="report-rec-num">2</div><p class="report-rec-text">Enable idempotency keys on your Adyen API integration to prevent duplicate charge patterns that have generated 7 duplicate payment anomalies this month.</p></div>
+        <div class="report-rec"><div class="report-rec-num">3</div><p class="report-rec-text">Set up Square payout schedule monitoring — 4 of 5 Square anomalies this month were payout timing gaps recoverable with a single support ticket.</p></div>
       </div>
     </div>
   </div>
@@ -319,7 +403,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="step-right">
         <p class="step-tag">Full monitoring</p>
         <p class="step-name">Monthly Detection & Protection</p>
-        <p class="step-desc">Continuous detection across all 4 processors running every hour. Every new anomaly is flagged immediately with a recovery playbook so your team can act fast. Pattern-based protection alerts fire before issues compound. Monthly report delivered showing everything found per processor. You keep 100% of every dollar you recover.</p>
+        <p class="step-desc">Continuous detection across all 4 processors running every hour. Every new anomaly is flagged immediately with a recovery playbook so your team can act fast. Pattern-based protection alerts fire before issues compound. You keep 100% of every dollar you recover.</p>
         <div class="step-price"><span class="price-main">$1,000</span><span class="price-unit">/month</span></div>
         <p class="price-note">Flat rate — all processors, all anomaly types included</p>
         <div class="features">
@@ -327,7 +411,8 @@ body { font-family: sans-serif; background: #0a0a0f; }
           <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Recovery playbook per anomaly — every time</div>
           <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>You keep 100% of recovered revenue</div>
           <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Pattern-based protection alerts</div>
-          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Monthly per-processor findings report</div>
+          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Monthly account overview — anomaly count, dollars detected, leakage reduction recommendations</div>
+          <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Per-processor breakdown every 30 days</div>
           <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Quarterly review call</div>
           <div class="feature"><div class="check"><svg viewBox="0 0 8 8" fill="none"><polyline points="1,4 3,6 7,2" stroke="#4a7fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Cancel anytime with 30 days notice</div>
         </div>
@@ -360,14 +445,8 @@ body { font-family: sans-serif; background: #0a0a0f; }
     </div>
     <div>
       <p class="footer-contact-label">Contact</p>
-      <div class="footer-contact-item">
-        <p class="footer-contact-type">Email</p>
-        <p class="footer-contact-value">Team@coreregulation.com</p>
-      </div>
-      <div class="footer-contact-item">
-        <p class="footer-contact-type">Phone</p>
-        <p class="footer-contact-value">+1 (248) 229-4409</p>
-      </div>
+      <div class="footer-contact-item"><p class="footer-contact-type">Email</p><p class="footer-contact-value">Team@coreregulation.com</p></div>
+      <div class="footer-contact-item"><p class="footer-contact-type">Phone</p><p class="footer-contact-value">+1 (248) 229-4409</p></div>
     </div>
   </div>
   <div class="footer-bottom">
