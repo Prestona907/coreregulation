@@ -61,7 +61,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
   <div class="page-header">
     <p class="page-tag">Legal</p>
     <h1 class="page-title">Privacy Policy</h1>
-    <p class="page-meta">Last updated: April 28, 2026</p>
+    <p class="page-meta">Last updated: May 5, 2026</p>
   </div>
   <div class="doc-body">
 
@@ -69,7 +69,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <p class="doc-section-num">01</p>
       <p class="doc-section-title">Overview</p>
       <div class="doc-section-body">
-        <p>Core Regulation ("we," "us," or "our") is committed to protecting the privacy and security of the information entrusted to us by our clients. This Privacy Policy explains how we collect, use, store, and protect information when you use our revenue integrity and leakage detection services.</p>
+        <p>Core Regulation ("we," "us," or "our") is committed to protecting the privacy and security of the information entrusted to us by our clients. This Privacy Policy explains how we collect, use, store, and protect information when you use our payment anomaly detection and reporting services.</p>
         <p>By engaging our services or accessing our platform, you agree to the practices described in this policy. If you do not agree, please discontinue use of our services.</p>
       </div>
     </div>
@@ -80,13 +80,12 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <p class="doc-section-num">02</p>
       <p class="doc-section-title">Information We Collect</p>
       <div class="doc-section-body">
-        <p>To perform revenue leakage detection and recovery, we collect the following categories of information:</p>
+        <p>To perform payment anomaly detection, we collect the following categories of information:</p>
         <ul>
-          <li><strong style="color:#aaa">Payment processor data</strong> — transaction records, fee details, settlement reports, dispute data, and balance information accessed via API connections to Stripe, Adyen, Square, and PayPal.</li>
+          <li><strong style="color:#aaa">Payment processor data</strong> — transaction records, fee details, settlement reports, dispute data, and balance information accessed via read-only API connections to Stripe, Adyen, Square, and PayPal.</li>
           <li><strong style="color:#aaa">Business information</strong> — company name, billing contact, and account details provided during onboarding.</li>
           <li><strong style="color:#aaa">Contact information</strong> — name, email address, and phone number of authorized representatives.</li>
           <li><strong style="color:#aaa">Usage data</strong> — how you interact with our dashboard and reports, including access logs and feature usage.</li>
-          <li><strong style="color:#aaa">Communication records</strong> — emails, notes, and records related to recovery actions taken on your behalf.</li>
         </ul>
       </div>
     </div>
@@ -99,11 +98,9 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="doc-section-body">
         <p>We use the information we collect exclusively to deliver our services. Specifically:</p>
         <ul>
-          <li>Detecting revenue leakage and anomalies across your connected payment processors</li>
-          <li>Performing recovery actions on your behalf under your written authorization</li>
-          <li>Generating audit reports and findings summaries</li>
-          <li>Communicating with payment processors, banks, or card networks as your authorized agent</li>
-          <li>Maintaining an audit trail of all detection and recovery activity</li>
+          <li>Detecting payment anomalies and revenue leakage across your connected payment processors</li>
+          <li>Generating anomaly reports, findings summaries, and recovery playbooks</li>
+          <li>Maintaining an audit trail of all detection activity</li>
           <li>Improving the accuracy and coverage of our detection engine</li>
           <li>Sending service-related communications such as reports, alerts, and updates</li>
         </ul>
@@ -117,8 +114,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <p class="doc-section-num">04</p>
       <p class="doc-section-title">API Access & Data Handling</p>
       <div class="doc-section-body">
-        <p>API connections to your payment processors are established using the minimum level of access required to perform our services. For detection purposes, connections are read-only. Recovery actions — such as submitting support tickets or filing dispute evidence — require explicit written authorization from you and are performed by our team on your behalf.</p>
-        <p>We will never initiate payments, move funds, issue refunds, or make unauthorized modifications to your processor accounts. Recovered funds are always returned directly to your processor account or bank account and never pass through our systems.</p>
+        <p>API connections to your payment processors are established using read-only access — the minimum level required to perform anomaly detection. We do not initiate payments, move funds, issue refunds, submit disputes, or make any modifications to your processor accounts. All recovery actions are performed by you directly using the playbooks we provide.</p>
         <p>API credentials provided to us are encrypted at rest using industry-standard encryption and are never stored in plain text, logged, or shared with any third party.</p>
       </div>
     </div>
@@ -131,7 +127,6 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="doc-section-body">
         <p>We do not sell, rent, or share your data with third parties for their own purposes. We may share information only in the following limited circumstances:</p>
         <ul>
-          <li><strong style="color:#aaa">Payment processors</strong> — when submitting recovery requests or dispute evidence on your behalf, we share only the specific transaction data necessary to support that action.</li>
           <li><strong style="color:#aaa">Service providers</strong> — we use trusted infrastructure providers (including cloud storage, database, and communication tools) that process data strictly on our behalf and under confidentiality obligations.</li>
           <li><strong style="color:#aaa">Legal requirements</strong> — we may disclose information if required by law, court order, or regulatory authority.</li>
           <li><strong style="color:#aaa">Business transfers</strong> — in the event of a merger, acquisition, or sale of assets, your data may be transferred as part of that transaction. We will notify you in advance.</li>
@@ -147,8 +142,8 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="doc-section-body">
         <p>We retain your data for as long as necessary to deliver our services and meet our legal obligations. Specifically:</p>
         <ul>
-          <li>Transaction and anomaly data is retained for 24 months from the date of collection to support ongoing monitoring and dispute windows.</li>
-          <li>Recovery action records and audit trails are retained for 5 years to support regulatory and financial audit requirements.</li>
+          <li>Transaction and anomaly data is retained for 24 months from the date of collection to support ongoing monitoring and pattern detection.</li>
+          <li>Detection records and audit trails are retained for 5 years to support regulatory and financial audit requirements.</li>
           <li>Upon termination of our engagement, you may request deletion of your data. We will complete deletion within 30 days, excluding records we are required to retain by law.</li>
         </ul>
       </div>
@@ -165,7 +160,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
           <li>Encryption of data at rest and in transit (TLS 1.2+)</li>
           <li>Encrypted storage of all API credentials</li>
           <li>Role-based access controls limiting internal access to data</li>
-          <li>Audit logging of all data access and recovery actions</li>
+          <li>Audit logging of all data access and detection actions</li>
           <li>Regular security reviews of our infrastructure and processes</li>
         </ul>
         <p>No method of transmission or storage is 100% secure. If you believe your information has been compromised, please contact us immediately at <a href="mailto:Team@coreregulation.com" style="color:#4a7fff;">Team@coreregulation.com</a>.</p>
@@ -224,7 +219,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
   <div class="footer-inner">
     <div>
       <p class="footer-brand">Core Regulation</p>
-      <p class="footer-desc">Standardizing revenue integrity across Stripe, Adyen, Square, and PayPal. We detect leakage, recover lost revenue, and provide bank-grade controls for scaling fintech and payment platforms.</p>
+      <p class="footer-desc">Payment anomaly detection across Stripe, Adyen, Square, and PayPal. We find your leakage, quantify it in dollars, and hand you the playbook to get it back.</p>
     </div>
     <div>
       <p class="footer-contact-label">Contact</p>
