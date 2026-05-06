@@ -7,18 +7,15 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: sans-serif; background: #0a0a0f; }
-
 .nav { position: sticky; top: 0; z-index: 100; background: #0a0a0f; border-bottom: 0.5px solid #1e1e2e; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; max-width: 100%; }
 .nav-inner { max-width: 820px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; }
 .nav-logo { font-size: 16px; font-weight: 500; color: #f0f0f0; text-decoration: none; }
 .nav-btn { background: #4a7fff; color: #fff; font-size: 13px; font-weight: 500; padding: 8px 20px; border-radius: 6px; text-decoration: none; }
-
 .page-wrap { max-width: 820px; margin: 0 auto; padding: 64px 24px 100px; }
 .page-header { margin-bottom: 56px; padding-bottom: 40px; border-bottom: 0.5px solid #1e1e2e; }
 .page-tag { font-size: 11px; letter-spacing: 0.12em; color: #4a7fff; text-transform: uppercase; font-weight: 500; margin-bottom: 16px; }
 .page-title { font-size: 40px; font-weight: 500; color: #f0f0f0; line-height: 1.1; margin-bottom: 16px; }
 .page-meta { font-size: 13px; color: #555; }
-
 .doc-body { display: flex; flex-direction: column; gap: 48px; }
 .doc-section { display: flex; flex-direction: column; gap: 16px; }
 .doc-section-num { font-size: 11px; letter-spacing: 0.1em; color: #4a7fff; text-transform: uppercase; font-weight: 500; }
@@ -37,7 +34,6 @@ body { font-family: sans-serif; background: #0a0a0f; }
 .contact-box-title { font-size: 15px; font-weight: 500; color: #f0f0f0; margin-bottom: 8px; }
 .contact-box-text { font-size: 14px; color: #888; line-height: 1.7; }
 .contact-box-email { color: #4a7fff; text-decoration: none; }
-
 .footer { padding: 48px 24px; border-top: 0.5px solid #1e1e2e; }
 .footer-inner { max-width: 820px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .footer-brand { font-size: 16px; font-weight: 500; color: #f0f0f0; margin-bottom: 12px; }
@@ -50,7 +46,6 @@ body { font-family: sans-serif; background: #0a0a0f; }
 .footer-copy { font-size: 13px; color: #444; }
 .footer-links { display: flex; gap: 24px; }
 .footer-link { font-size: 13px; color: #444; text-decoration: none; }
-
 @media (max-width: 680px) {
   .page-title { font-size: 28px; }
   .footer-inner { grid-template-columns: 1fr; }
@@ -59,7 +54,6 @@ body { font-family: sans-serif; background: #0a0a0f; }
 </style>
 </head>
 <body>
-
 <nav class="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">Core Regulation</a>
@@ -71,7 +65,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
   <div class="page-header">
     <p class="page-tag">Legal</p>
     <h1 class="page-title">Terms of Service</h1>
-    <p class="page-meta">Last updated: April 28, 2026</p>
+    <p class="page-meta">Last updated: May 5, 2026</p>
   </div>
 
   <div class="doc-body">
@@ -80,8 +74,8 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <p class="doc-section-num">01</p>
       <p class="doc-section-title">Agreement to Terms</p>
       <div class="doc-section-body">
-        <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("Client," "you," or "your") and Core Regulation ("we," "us," or "our") governing your use of our revenue integrity, leakage detection, and recovery services.</p>
-        <p>By engaging our services, signing an authorization agreement, or accessing our platform, you confirm that you have read, understood, and agree to be bound by these Terms. If you are entering into these Terms on behalf of a company or organization, you represent that you have authority to bind that entity.</p>
+        <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("Client," "you," or "your") and Core Regulation ("we," "us," or "our") governing your use of our payment anomaly detection and reporting services.</p>
+        <p>By engaging our services, or accessing our platform, you confirm that you have read, understood, and agree to be bound by these Terms. If you are entering into these Terms on behalf of a company or organization, you represent that you have authority to bind that entity.</p>
       </div>
     </div>
 
@@ -93,10 +87,10 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="doc-section-body">
         <p>Core Regulation provides the following services:</p>
         <ul>
-          <li><strong style="color:#aaa">Revenue Audit</strong> — a free analysis of your payment processor data across Stripe, Adyen, Square, and PayPal to identify revenue leakage and anomalies, delivered within 7 business days. There is no cost for the initial audit.</li>
-          <li><strong style="color:#aaa">Monthly Monitoring & Recovery</strong> — ongoing detection, reporting, active recovery, and protection across all connected payment processors at a flat rate of $5,000 per month. This includes all recovery actions taken on your behalf at no additional charge.</li>
+          <li><strong style="color:#aaa">Revenue Audit</strong> — a free analysis of your payment processor data across Stripe, Adyen, Square, and PayPal to identify anomalies and revenue leakage, delivered within 7 business days. There is no cost for the initial audit. Each anomaly detected includes a processor-specific recovery playbook with exact steps for your team to recover the revenue directly.</li>
+          <li><strong style="color:#aaa">Monthly Detection & Protection</strong> — ongoing anomaly detection, reporting, protection alerts, and recovery playbook delivery across all connected payment processors at a flat rate of $1,000 per month. All recovery is performed by the client using the playbooks we provide. We do not perform recovery actions on your behalf.</li>
         </ul>
-        <p>The specific scope of services for your engagement will be documented in a separate authorization agreement or statement of work, which forms part of these Terms.</p>
+        <p>The specific scope of services for your engagement will be documented in a separate agreement or statement of work, which forms part of these Terms.</p>
       </div>
     </div>
 
@@ -104,16 +98,12 @@ body { font-family: sans-serif; background: #0a0a0f; }
 
     <div class="doc-section">
       <p class="doc-section-num">03</p>
-      <p class="doc-section-title">Client Authorization</p>
+      <p class="doc-section-title">Nature of Service — Detection Only</p>
       <div class="doc-section-body">
-        <p>To perform recovery actions on your behalf, we require explicit written authorization before taking any action that involves contacting payment processors, submitting disputes, or negotiating with financial institutions. This authorization:</p>
-        <ul>
-          <li>Must be provided in writing prior to any recovery action being taken</li>
-          <li>Covers only the specific actions and processors described in the authorization</li>
-          <li>Does not grant us any ability to access, move, or control your funds directly</li>
-          <li>Can be revoked at any time by providing written notice to Team@coreregulation.com</li>
-        </ul>
-        <p>API connections established for detection purposes are read-only and used solely to identify anomalies. Any recovery actions taken on your behalf — such as contacting processors or submitting disputes — require separate explicit written authorization as described above. We will never move, transfer, or withdraw funds from your accounts.</p>
+        <div class="highlight-box">
+          <p>Core Regulation is a detection and reporting service. We identify payment anomalies and provide recovery playbooks. We do not perform recovery actions on your behalf. We do not contact your payment processors, submit disputes, negotiate with financial institutions, or take any action within your processor accounts. All recovery actions described in our playbooks are performed by you and your team directly.</p>
+          <p>API connections are established using read-only access only. We have no ability to move funds, initiate payments, issue refunds, or modify your processor accounts in any way.</p>
+        </div>
       </div>
     </div>
 
@@ -124,7 +114,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <p class="doc-section-title">Fees & Payment</p>
       <div class="doc-section-body">
         <p><strong style="color:#aaa">Revenue Audit:</strong> The initial audit is provided at no cost. If no recoverable revenue is identified, no fees are owed and no further obligation exists.</p>
-        <p><strong style="color:#aaa">Monthly Monitoring & Recovery:</strong> Billed at a flat rate of $5,000 per month, invoiced at the start of each billing period. This fee covers all monitoring, detection, reporting, and recovery actions. There are no additional per-recovery or percentage-based fees of any kind.</p>
+        <p><strong style="color:#aaa">Monthly Detection & Protection:</strong> Billed at a flat rate of $1,000 per month, invoiced at the start of each billing period. This fee covers all detection, reporting, protection alerts, and recovery playbook delivery. There are no additional per-anomaly or percentage-based fees of any kind.</p>
         <p>You may cancel monthly services at any time with 30 days written notice. No refunds are issued for partial months.</p>
         <p>All fees are in US dollars. Late payments may incur interest at 1.5% per month on the outstanding balance.</p>
       </div>
@@ -134,11 +124,11 @@ body { font-family: sans-serif; background: #0a0a0f; }
 
     <div class="doc-section">
       <p class="doc-section-num">05</p>
-      <p class="doc-section-title">No Guarantee of Recovery or Detection</p>
+      <p class="doc-section-title">No Guarantee of Detection or Recovery</p>
       <div class="doc-section-body">
         <div class="highlight-box">
-          <p>We do not guarantee that any specific amount of revenue will be recovered. Our detection engine identifies potential leakage based on available data, but recovery outcomes depend on factors outside our control, including payment processor policies, dispute timeframes, card network rules, and the age of the transactions in question. We will make all reasonable efforts to recover identified leakage, but outcomes are not guaranteed.</p>
-          <p>We also do not guarantee that all anomalies or instances of revenue leakage will be detected. Our platform operates on a best-effort basis using automated detection methods. Core Regulation is not liable for anomalies, overcharges, or leakage that are not identified by our system. Clients are encouraged to maintain their own independent review processes.</p>
+          <p>We do not guarantee that all anomalies or instances of revenue leakage will be detected. Our platform operates on a best-effort basis using automated detection methods. Core Regulation is not liable for anomalies, overcharges, or leakage that are not identified by our system. Clients are encouraged to maintain their own independent review processes.</p>
+          <p>We do not guarantee that following our recovery playbooks will result in any specific amount of revenue being recovered. Recovery outcomes depend on factors entirely outside our control, including your payment processor's policies, dispute timeframes, card network rules, and the age of the transactions in question. The playbooks we provide represent our best guidance based on processor documentation and industry experience, but outcomes are not guaranteed.</p>
         </div>
       </div>
     </div>
@@ -152,10 +142,11 @@ body { font-family: sans-serif; background: #0a0a0f; }
         <p>You agree to:</p>
         <ul>
           <li>Provide accurate and complete information during onboarding and throughout the engagement</li>
-          <li>Grant the necessary API access to the payment processors you wish us to analyze, including read-only access for detection and any additional access required for authorized recovery actions</li>
-          <li>Promptly review and respond to findings reports and recovery recommendations</li>
+          <li>Grant read-only API access to the payment processors you wish us to analyze</li>
+          <li>Promptly review findings reports and recovery playbooks delivered to you</li>
+          <li>Perform all recovery actions yourself using the playbooks we provide</li>
           <li>Notify us immediately if you revoke any API credentials or change your processor accounts</li>
-          <li>Ensure that any authorization you provide to us is valid and that you have authority to grant it</li>
+          <li>Ensure that any API access you provide to us is authorized within your organization</li>
           <li>Pay all invoices in accordance with Section 04 of these Terms</li>
         </ul>
       </div>
@@ -178,8 +169,8 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <p class="doc-section-num">08</p>
       <p class="doc-section-title">Intellectual Property</p>
       <div class="doc-section-body">
-        <p>Our detection engine, methodology, software, reports, and platform are proprietary to Core Regulation and protected by intellectual property law. Your engagement with us does not grant you any ownership of or license to our technology or methods beyond what is necessary to receive the services.</p>
-        <p>Any reports, findings, or deliverables we produce for you are licensed to you for your internal business use only and may not be resold or redistributed without our written consent.</p>
+        <p>Our detection engine, methodology, software, reports, playbooks, and platform are proprietary to Core Regulation and protected by intellectual property law. Your engagement with us does not grant you any ownership of or license to our technology or methods beyond what is necessary to receive the services.</p>
+        <p>Reports, findings, and playbooks we produce for you are licensed to you for your internal business use only and may not be resold or redistributed without our written consent.</p>
       </div>
     </div>
 
@@ -191,7 +182,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="doc-section-body">
         <div class="highlight-box">
           <p>To the maximum extent permitted by law, Core Regulation's total liability to you for any claims arising from or related to these Terms or our services shall not exceed the total fees paid by you to us in the 3 months preceding the claim. We are not liable for any indirect, incidental, consequential, or punitive damages, including lost profits or lost revenue, even if we have been advised of the possibility of such damages.</p>
-          <p>This limitation applies to all claims whether based on contract, tort, negligence, or any other legal theory, including claims arising from missed detections, incomplete recovery, platform downtime, or data handling.</p>
+          <p>This limitation applies to all claims whether based on contract, tort, negligence, or any other legal theory, including claims arising from missed detections, inaccurate playbook guidance, platform downtime, or data handling. Core Regulation is not liable for any recovery outcomes achieved or not achieved by the client following our playbook guidance.</p>
         </div>
       </div>
     </div>
@@ -204,7 +195,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
       <div class="doc-section-body">
         <p>Either party may terminate the engagement at any time with 30 days written notice. Upon termination:</p>
         <ul>
-          <li>All pending recovery actions will be completed or handed back to you at your direction</li>
+          <li>Any outstanding reports or playbooks will be delivered to you</li>
           <li>Any fees owed prior to termination remain payable</li>
           <li>You should revoke any API credentials provided to us</li>
           <li>We will delete your data within 30 days upon written request, subject to legal retention requirements</li>
@@ -276,7 +267,7 @@ body { font-family: sans-serif; background: #0a0a0f; }
   <div class="footer-inner">
     <div>
       <p class="footer-brand">Core Regulation</p>
-      <p class="footer-desc">Standardizing revenue integrity across Stripe, Adyen, Square, and PayPal. We detect leakage, recover lost revenue, and provide bank-grade controls for scaling fintech and payment platforms.</p>
+      <p class="footer-desc">Payment anomaly detection across Stripe, Adyen, Square, and PayPal. We find your leakage, quantify it in dollars, and hand you the playbook to get it back.</p>
     </div>
     <div>
       <p class="footer-contact-label">Contact</p>
